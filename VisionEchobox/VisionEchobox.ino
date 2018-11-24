@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
-#include <Wire.h>
-#include <Servo.h>
-Servo myservo; // 建立Servo物件，控制伺服馬達
+?#include <Wire.h>
+//#include <Servo.h>
+//Servo myservo; // 建立Servo物件，控制伺服馬達
 // the maximum received command length from an Android system (over the bluetooth)
 #define MAX_BTCMDLEN 128
 // 建立一個軟體模擬的序列埠; 不要接反了!
@@ -63,14 +63,14 @@ void loop() {
             Serial.println(str);
                  digitalWrite(LED_BUILTIN, LOW);   // turn the LED on (LOW is the voltage level)
             delay(300);
-            Serial.println(myservo.read());
+            
       
           } else if (str[0] == 67 || str[0] == 'c' || str[0] == 2) {  // C
                 Serial.println(2);
                   Serial.println(str);
                       digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
                   delay(300);
-                  Serial.println(myservo.read());    
+                   
           }
       cmd[0] = '\0';
    }
